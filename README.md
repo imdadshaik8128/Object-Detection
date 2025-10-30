@@ -106,10 +106,6 @@ object-detection-microservice/
    cd object-detection-microservice
    ```
 
-3. **Create Required Directories**:
-   ```bash
-   mkdir -p static/uploads static/results/image static/results/json
-   ```
 
 ### Execution
 
@@ -388,8 +384,6 @@ docker-compose exec ai-backend /bin/bash
 ### API Testing
 * **Postman**: https://www.postman.com/
 * **cURL Documentation**: https://curl.se/docs/
-
-
 
 ## Contact
 For questions or support, please open an issue in the repository.
