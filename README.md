@@ -83,12 +83,12 @@ object-detection-microservice/
 │   ├── requirements.txt
 │   ├── templates/
 │   │   └── index.html
-│   └── .dockerignore
+│   
 └── ai-backend/
     ├── Dockerfile
     ├── Ai-app.py
     ├── requirements.txt
-    └── .dockerignore
+   
 ```
 
 ## How to Run
