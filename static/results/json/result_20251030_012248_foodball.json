@@ -1,0 +1,59 @@
+{
+    "success": true,
+    "image_name": "foodball.jpg",
+    "image_size": {
+        "width": 1000,
+        "height": 666
+    },
+    "detections_count": 3,
+    "detections": [
+        {
+            "object_id": 1,
+            "class": "sports ball",
+            "confidence": 0.9129,
+            "bounding_box": {
+                "x_min": 406.42,
+                "y_min": 555.36,
+                "x_max": 500.13,
+                "y_max": 645.68
+            },
+            "center": {
+                "x": 453.27,
+                "y": 600.52
+            }
+        },
+        {
+            "object_id": 2,
+            "class": "person",
+            "confidence": 0.8401,
+            "bounding_box": {
+                "x_min": 526.98,
+                "y_min": 37.21,
+                "x_max": 905.86,
+                "y_max": 595.39
+            },
+            "center": {
+                "x": 716.42,
+                "y": 316.3
+            }
+        },
+        {
+            "object_id": 3,
+            "class": "person",
+            "confidence": 0.8242,
+            "bounding_box": {
+                "x_min": 172.7,
+                "y_min": 52.24,
+                "x_max": 555.08,
+                "y_max": 634.36
+            },
+            "center": {
+                "x": 363.89,
+                "y": 343.3
+            }
+        }
+    ],
+    "result_image": "/static/results/image/result_20251030_012248_foodball.jpg",
+    "result_path": "C:\\Users\\simdad\\Documents\\AI\\object-detection-microservice\\static\\results\\image\\result_20251030_012248_foodball.jpg",
+    "timestamp": "2025-10-30T01:22:48.997635"
+}

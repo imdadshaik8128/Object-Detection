@@ -1,0 +1,104 @@
+{
+    "success": true,
+    "image_name": "cricket.jpg",
+    "image_size": {
+        "width": 275,
+        "height": 183
+    },
+    "detections_count": 6,
+    "detections": [
+        {
+            "object_id": 1,
+            "class": "person",
+            "confidence": 0.6695,
+            "bounding_box": {
+                "x_min": 7.16,
+                "y_min": 34.41,
+                "x_max": 91.09,
+                "y_max": 177.73
+            },
+            "center": {
+                "x": 49.12,
+                "y": 106.07
+            }
+        },
+        {
+            "object_id": 2,
+            "class": "person",
+            "confidence": 0.6477,
+            "bounding_box": {
+                "x_min": 142.73,
+                "y_min": 43.35,
+                "x_max": 245.7,
+                "y_max": 176.24
+            },
+            "center": {
+                "x": 194.21,
+                "y": 109.8
+            }
+        },
+        {
+            "object_id": 3,
+            "class": "person",
+            "confidence": 0.4719,
+            "bounding_box": {
+                "x_min": 249.72,
+                "y_min": 43.9,
+                "x_max": 274.49,
+                "y_max": 76.56
+            },
+            "center": {
+                "x": 262.1,
+                "y": 60.23
+            }
+        },
+        {
+            "object_id": 4,
+            "class": "person",
+            "confidence": 0.4202,
+            "bounding_box": {
+                "x_min": 78.89,
+                "y_min": 1.37,
+                "x_max": 117.54,
+                "y_max": 44.8
+            },
+            "center": {
+                "x": 98.22,
+                "y": 23.09
+            }
+        },
+        {
+            "object_id": 5,
+            "class": "person",
+            "confidence": 0.3115,
+            "bounding_box": {
+                "x_min": 230.04,
+                "y_min": 35.26,
+                "x_max": 257.31,
+                "y_max": 75.94
+            },
+            "center": {
+                "x": 243.68,
+                "y": 55.6
+            }
+        },
+        {
+            "object_id": 6,
+            "class": "person",
+            "confidence": 0.3039,
+            "bounding_box": {
+                "x_min": 31.81,
+                "y_min": 1.6,
+                "x_max": 61.98,
+                "y_max": 44.32
+            },
+            "center": {
+                "x": 46.89,
+                "y": 22.96
+            }
+        }
+    ],
+    "result_image": "/static/results/image/result_20251030_012218_cricket.jpg",
+    "result_path": "C:\\Users\\simdad\\Documents\\AI\\object-detection-microservice\\static\\results\\image\\result_20251030_012218_cricket.jpg",
+    "timestamp": "2025-10-30T01:22:18.053171"
+}

@@ -1,0 +1,59 @@
+{
+    "success": true,
+    "image_name": "zidane.jpg",
+    "image_size": {
+        "width": 1280,
+        "height": 720
+    },
+    "detections_count": 3,
+    "detections": [
+        {
+            "object_id": 1,
+            "class": "person",
+            "confidence": 0.7877,
+            "bounding_box": {
+                "x_min": 742.67,
+                "y_min": 39.55,
+                "x_max": 1154.49,
+                "y_max": 715.11
+            },
+            "center": {
+                "x": 948.58,
+                "y": 377.33
+            }
+        },
+        {
+            "object_id": 2,
+            "class": "person",
+            "confidence": 0.4117,
+            "bounding_box": {
+                "x_min": 134.03,
+                "y_min": 180.67,
+                "x_max": 742.21,
+                "y_max": 720.0
+            },
+            "center": {
+                "x": 438.12,
+                "y": 450.34
+            }
+        },
+        {
+            "object_id": 3,
+            "class": "tie",
+            "confidence": 0.2685,
+            "bounding_box": {
+                "x_min": 435.76,
+                "y_min": 433.87,
+                "x_max": 503.0,
+                "y_max": 712.02
+            },
+            "center": {
+                "x": 469.38,
+                "y": 572.95
+            }
+        }
+    ],
+    "result_image": "/static/results/image/result_20251030_012301_zidane.jpg",
+    "result_path": "C:\\Users\\simdad\\Documents\\AI\\object-detection-microservice\\static\\results\\image\\result_20251030_012301_zidane.jpg",
+    "timestamp": "2025-10-30T01:23:01.661043"
+}

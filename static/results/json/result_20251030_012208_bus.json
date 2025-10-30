@@ -1,0 +1,89 @@
+{
+    "success": true,
+    "image_name": "bus.jpg",
+    "image_size": {
+        "width": 810,
+        "height": 1080
+    },
+    "detections_count": 5,
+    "detections": [
+        {
+            "object_id": 1,
+            "class": "person",
+            "confidence": 0.8758,
+            "bounding_box": {
+                "x_min": 55.21,
+                "y_min": 397.67,
+                "x_max": 210.82,
+                "y_max": 889.38
+            },
+            "center": {
+                "x": 133.02,
+                "y": 643.53
+            }
+        },
+        {
+            "object_id": 2,
+            "class": "person",
+            "confidence": 0.8047,
+            "bounding_box": {
+                "x_min": 683.34,
+                "y_min": 367.2,
+                "x_max": 810.0,
+                "y_max": 880.82
+            },
+            "center": {
+                "x": 746.67,
+                "y": 624.01
+            }
+        },
+        {
+            "object_id": 3,
+            "class": "person",
+            "confidence": 0.787,
+            "bounding_box": {
+                "x_min": 216.39,
+                "y_min": 408.82,
+                "x_max": 345.59,
+                "y_max": 864.6
+            },
+            "center": {
+                "x": 280.99,
+                "y": 636.71
+            }
+        },
+        {
+            "object_id": 4,
+            "class": "person",
+            "confidence": 0.5191,
+            "bounding_box": {
+                "x_min": 0.0,
+                "y_min": 572.62,
+                "x_max": 71.92,
+                "y_max": 892.6
+            },
+            "center": {
+                "x": 35.96,
+                "y": 732.61
+            }
+        },
+        {
+            "object_id": 5,
+            "class": "bus",
+            "confidence": 0.4918,
+            "bounding_box": {
+                "x_min": 22.97,
+                "y_min": 227.98,
+                "x_max": 805.71,
+                "y_max": 780.54
+            },
+            "center": {
+                "x": 414.34,
+                "y": 504.26
+            }
+        }
+    ],
+    "result_image": "/static/results/image/result_20251030_012208_bus.jpg",
+    "result_path": "C:\\Users\\simdad\\Documents\\AI\\object-detection-microservice\\static\\results\\image\\result_20251030_012208_bus.jpg",
+    "timestamp": "2025-10-30T01:22:08.857716"
+}

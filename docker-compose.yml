@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  ai-backend:
+    build:
+      context: ./ai-backend
+      dockerfile: Dockerfile
+    container_name: object-detection-ai
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./static:/static
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - detection-network
+
+  ui-backend:
+    build:
+      context: ./ui-backend
+      dockerfile: Dockerfile
+    container_name: object-detection-ui
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./static:/static
+    environment:
+      - AI_BACKEND_URL=http://ai-backend:8001
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - ai-backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped
+    networks:
+      - detection-network
+
+networks:
+  detection-network:
+    driver: bridge
