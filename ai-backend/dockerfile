@@ -1,35 +1,51 @@
-# Dockerfile for AI Backend (FastAPI + YOLOv5)
+# AI Backend Dockerfile
 FROM python:3.9-slim
 
+# Set working directory
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
+# Install system dependencies with retry logic
+RUN apt-get clean && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get update --fix-missing && \
+    apt-get install -y --no-install-recommends \
     gcc \
     g++ \
+    curl \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
     libxrender-dev \
     libgomp1 \
-    #libgl1-mesa-glx \
+    libglx-mesa0 \
+    libgl1 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application files
+# Install PyTorch separately (CPU version for smaller size and faster download)
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# Install remaining Python dependencies
+RUN pip install --no-cache-dir --default-timeout=100 -r requirements.txt || \
+    pip install --no-cache-dir --default-timeout=100 --no-deps -r requirements.txt
+
+# Copy application code
 COPY app.py .
 
-# Create necessary directories
-RUN mkdir -p /static/results/image /static/results/json /static/uploads
+# Create directory structure
+RUN mkdir -p static/results
 
 # Expose port
 EXPOSE 8001
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD curl -f http://localhost:8001/health || exit 1
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["python", "app.py"]
