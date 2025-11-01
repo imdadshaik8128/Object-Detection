@@ -134,6 +134,20 @@ object-detection-microservice/
    docker-compose down -v
    ```
 
+### run without Docker: 
+1. **Build and Start Services**:
+   ```bash
+   cd ai-backend
+   pip install -r requirements.txt
+   python app.py
+   
+2. **New terminal**:  
+   ```bash
+   cd ui-backend
+   pip install -r requirements.txt
+   python app.py
+```
+
 ## API Documentation
 
 ### UI Backend Endpoints
